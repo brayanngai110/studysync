@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudySync</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">STUDY PLANNER</p>
+        <h1>StudySync</h1>
+        <p class="subtitle">Track assignments, stay organized, and keep school work under control.</p>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Add a Task</h2>
+          <p class="helper">Fill out the fields below and your task will appear in the planner.</p>
+
+          <form id="taskForm" class="task-form">
+            <label>
+              Task name
+              <input type="text" id="taskName" placeholder="English essay" required />
+            </label>
+
+            <label>
+              Due date
+              <input type="date" id="dueDate" required />
+            </label>
+
+            <label>
+              Difficulty
+              <select id="difficulty" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </label>
+
+            <button type="submit" class="primary-btn">Add Task</button>
+          </form>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <h2>Your Tasks</h2>
+            <span id="taskCount" class="muted">0 tasks</span>
+          </div>
+          <div id="taskList" class="task-list"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
